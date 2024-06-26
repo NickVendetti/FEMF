@@ -51,6 +51,8 @@ function vowelCount(str) {
     if (vowels.indexOf(lowerCasedLetter) !== -1) {
       if (obj[lowerCasedLetter]) {
         obj[lowerCasedLetter]++;
+      } else {
+        obj[lowerCasedLetter] = 1;
       }
     }
   });
@@ -68,7 +70,7 @@ function doubleValuesWithMap(arr) {
 //Write a function called valTimesIndex which accepts an array and returns a new array with each value multiplied by the index it is currently at in the array.
 
 function valTimesIndex(arr) {
-  return arr.map(function (val, index) {
+  return arr.map(function (val, idx) {
     return val * idx;
   });
 }
